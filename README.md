@@ -1,2 +1,2 @@
-# primer_ejemplo
+# Primer Ejemplo
 Esto es una prueba
