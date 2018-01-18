@@ -1,12 +1,12 @@
-#Prueba
+# Prueba
 
 Estoy probando las listas:
 
-*Holo
-*SDSA
+* Holo
+* SDSA
 
 
 asdasddsdasdds
 -----------------------------------------
 sd
-1.EWEW
+1. EWEW
