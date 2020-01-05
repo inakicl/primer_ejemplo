@@ -1,5 +1,5 @@
 <?php
-
-echo "Sergio es feo, pero mucho";
+echo 'prueba heroku';
+ echo phpinfo();
 
 ?>
