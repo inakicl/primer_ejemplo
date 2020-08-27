@@ -1,8 +1,4 @@
-.estilizar {
-  height: 100px;
-  border: 12px black;
-  font-size: xx-large;
-}
+
 
 .el-cuerpo-mi-rey {
   font-family: "Lucida Console", sans-serif;
@@ -16,38 +12,35 @@
   );*/
   /*background-repeat: no-repeat;*/
 }
-#first-row {
-  /* background-image: url(https://picjumbo.com/wp-content/uploads/endless-ocean-2210x1474.jpg);*/
-  /* background: rgb(187, 183, 255);
-  background: linear-gradient(
-    180deg,
-    rgba(187, 183, 255, 1) 0%,
-    rgba(237, 237, 237, 1) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
-*/
-  background-repeat: no-repeat;
-  background-size: auto;
-  height: 10rem;
+
+#row-proyectos {
+  background-color: #00334e;
+
 }
+
+.retos-destacados {
+  background-color: #ee6f57;
+  color: #f6f5f5;
+top: 100px;}
 
 .tab-padre {
   background-color: #00334e;
 }
+
+
 .tab {
   height: 3rem;
-  border: none;
+  border: solid 1px #f6f5f5;
   border: solid 1px #00334e;
 }
 .tab input {
-  border: none;
+  border: solid 1px #f6f5f5;
   background-color: #145374;
   color: #f6f5f5;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
-
 }
 .tab input:hover {
   background-color: #ee6f57;
@@ -68,7 +61,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: solid 2px #f6f5f5;
 }
 
 .imagen {
@@ -90,4 +82,6 @@
   opacity: 0.4;
 }
 
-
+.bg-especial {
+    background-color: #4c7083;
+}
