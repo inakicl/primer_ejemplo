@@ -1,0 +1,93 @@
+.estilizar {
+  height: 100px;
+  border: 12px black;
+  font-size: xx-large;
+}
+
+.el-cuerpo-mi-rey {
+  font-family: "Lucida Console", sans-serif;
+  background: #f6f5f5;
+  /*background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(224, 224, 224, 1) 50%,
+    rgba(201, 201, 201, 1) 100%,
+    rgba(237, 237, 237, 1) 100%
+  );*/
+  /*background-repeat: no-repeat;*/
+}
+#first-row {
+  /* background-image: url(https://picjumbo.com/wp-content/uploads/endless-ocean-2210x1474.jpg);*/
+  /* background: rgb(187, 183, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(187, 183, 255, 1) 0%,
+    rgba(237, 237, 237, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+*/
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 10rem;
+}
+
+.tab-padre {
+  background-color: #00334e;
+}
+.tab {
+  height: 3rem;
+  border: none;
+  border: solid 1px #00334e;
+}
+.tab input {
+  border: none;
+  background-color: #145374;
+  color: #f6f5f5;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+
+}
+.tab input:hover {
+  background-color: #ee6f57;
+}
+.tab input:focus {
+  outline: none;
+}
+
+.borde-inferior {
+  border-bottom: solid 1px rgb(212, 212, 212);
+}
+
+.imagen-contenedor {
+  height: 300px;
+  overflow: hidden;
+  background-color: #00334e;
+  padding: 0; /*quita q la imagen la tenga q reescalar*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2px #f6f5f5;
+}
+
+.imagen {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border: solid 1px #ee6f57;
+
+  /*Animaciones*/
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.imagen:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 0.4;
+}
+
+

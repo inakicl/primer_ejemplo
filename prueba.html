@@ -1,19 +1,94 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="librerias/bootstrap-4.3.1-dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="librerias/estilos.css" />
 
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>PortFolio personal de Iñaki</title>
+    <link rel="icon" href="https://drive.google.com/thumbnail?id=1K6cGrtmbDGXZYLxO1fVy4gsHJohKczw-"
+        type="image/icon type">
+
 </head>
 
-<body>
+<body class="el-cuerpo-mi-rey">
+    <!-- Cuerpo/contenedor principal de la pagina-->
+    <div class="container-fluid m-auto">
+
+        <!-- Lo que se ve en grande-->
+        <div class="row" id="first-row">
+            <div class="col-12 align-self-center ">
+                <h1 class="">Hola, soy un coche el&eacute;ctrico</h1>
+                <h1 class=""> programador web multiplataforma y cosas de redes</h1>
+            </div>
+        </div>
+
+        <!-- Tira con imagenes de mis proyectos-->
+        <div class="row">
+            <div class="col-4 imagen-contenedor">
+                <img src="https://drive.google.com/uc?id=1mhOH5KE8vrj29CFjqUuHqOMCVrMeIY65" alt="Proyecto imagen 1"
+                class="imagen" />
+            </div>
+            <div class="col-4 imagen-contenedor">
+                <img src="https://drive.google.com/uc?id=1YSPISCZ-7xW6WX8cfn_V2eo3mNUtwHqZ" alt="Proyecto imagen 2"
+                class="imagen" />
+            </div>
+            <div class="col-4 imagen-contenedor">
+                <img src="https://drive.google.com/uc?id=1md-EcqcHOAeDff5w5WSSYtAisNJyEwtx" alt="Proyecto imagen 3"
+                class="imagen" />
+            </div>
+        </div>
+
+        <!-- Caja de navegacion simple-->
+        <div class="row navbar borde-inferior tab-padre">
+            <div class="col-12 d-flex justify-content-around ">
+                <div class="tab w-100">
+                    <input id="boton1" type="button" class="w-100 h-100 " value="Info.Personal">
+                </div>
+                <div class="tab w-100 ">
+                    <input id="boton2" type="button" class="w-100 h-100" value="Más proyectos">
+                </div>
+                <div class="tab w-100">
+                    <input id="boton3" type="button" class="w-100 h-100" value="Contacto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Caja para cargar la info mas contacto (cv, github, egibide, email, etc.)-->
+        <div class="row h-100 ">
+            <div class="col " id="infos">
+
+                <div class="informacionPersonal bg-info">
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Pruebas con imagenes puestas en drive -->
     <img src="https://drive.google.com/thumbnail?id=1K6cGrtmbDGXZYLxO1fVy4gsHJohKczw-" alt="Imagen de prueba"
-        class="img-fluid border w-100" />
+        class="img-fluid border " hidden />
+    <img src="https://drive.google.com/thumbnail?id=1mhOH5KE8vrj29CFjqUuHqOMCVrMeIY65" alt="Imagen de prueba"
+        class="img-fluid border " hidden/>
 </body>
-<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+<script src="librerias/jQuery 3.5.1.js"></script>
+<!--octokit de github para ver mis repositorios?-->
+<script type="module">
+    import { Octokit } from "https://cdn.pika.dev/@octokit/core";
+</script>
+<script src="librerias/funcionalidades.js"></script>
+
+<script src="librerias/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
 </html>
