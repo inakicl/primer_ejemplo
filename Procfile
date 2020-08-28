@@ -1,1 +1,1 @@
-web: /prueba.html
+web: prueba.html
