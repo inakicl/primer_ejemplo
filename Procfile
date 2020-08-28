@@ -1,1 +1,2 @@
-web: prueba.html
+web: public/
+
