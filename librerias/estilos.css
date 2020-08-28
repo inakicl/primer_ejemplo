@@ -1,16 +1,8 @@
-
-
 .el-cuerpo-mi-rey {
   font-family: "Lucida Console", sans-serif;
   background: #f6f5f5;
-  /*background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(224, 224, 224, 1) 50%,
-    rgba(201, 201, 201, 1) 100%,
-    rgba(237, 237, 237, 1) 100%
-  );*/
-  /*background-repeat: no-repeat;*/
+  animation: 1s ease-out 0s 1 imagenCarga;
+
 }
 
 #row-proyectos {
@@ -23,6 +15,27 @@
   color: #f6f5f5;
 top: 100px;}
 
+.desc {
+  position: relative;
+  z-index: 1;
+  background-color: #4c7083;
+
+}
+
+.enlace {
+  height: 75px;
+  width: 75px;
+  background-image: url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+}
+
+.titulo {
+  text-decoration: underline;
+}
+
+
 .tab-padre {
   background-color: #00334e;
 }
@@ -30,11 +43,10 @@ top: 100px;}
 
 .tab {
   height: 3rem;
-  border: solid 1px #f6f5f5;
-  border: solid 1px #00334e;
+
 }
-.tab input {
-  border: solid 1px #f6f5f5;
+#boton1, #boton2, #boton3 {
+  /*border: solid 1px #f6f5f5;*/ border: none;
   background-color: #145374;
   color: #f6f5f5;
   transition: all 0.25s ease-in-out;
@@ -42,10 +54,15 @@ top: 100px;}
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
 }
-.tab input:hover {
+
+.seleccionado {
+  background-color: #ee6f57 !important;
+}
+
+#boton1:hover, #boton2:hover,#boton3:hover {
   background-color: #ee6f57;
 }
-.tab input:focus {
+#boton1:focus, #boton2:focus, #boton3:focus {
   outline: none;
 }
 
@@ -63,11 +80,25 @@ top: 100px;}
   align-items: center;
 }
 
+@keyframes imagenCarga {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
 .imagen {
   width: 90%;
   height: 90%;
   object-fit: cover;
   border: solid 1px #ee6f57;
+  z-index: 2;
+  position: absolute;
+  animation: 0.5s ease-out 0s 1 imagenCarga;
+
+  opacity: 1;
 
   /*Animaciones*/
   transition: all 0.5s ease-in-out;
@@ -79,9 +110,10 @@ top: 100px;}
 .imagen:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  opacity: 0.4;
+  opacity: 0.15;
 }
 
 .bg-especial {
+    color: #f6f5f5;
     background-color: #4c7083;
 }
