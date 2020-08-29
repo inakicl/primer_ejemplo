@@ -1,0 +1,108 @@
+/*Botones poner pregunta como favorita*/
+.dar-fav {
+    color: #747474;
+}
+
+.quitar-fav {
+    color: #fff000;
+    stroke: black;
+    stroke-width: 50;
+}
+
+/* Aside de etiquetas en el indice*/
+.etiquetas-titulo {
+    color: gray;
+    background: #fbf59a;
+    padding: 1em;
+}
+
+.aside {
+    margin-left: 5%;
+}
+
+#paginacion {
+    margin: 2%;
+}
+
+/* Bordes de la pregunta si está resuelta o no resuelta*/
+.resuelta {
+    border-color: rgba(79, 219, 51, 1) !important;
+    -webkit-box-shadow: 0 0 5px 0 rgba(79, 219, 51, 1);
+    -moz-box-shadow: 0 0 5px 0 rgba(79, 219, 51, 1);
+    box-shadow: 0 0 5px 0 rgba(79, 219, 51, 1);
+}
+
+.no-resuelta {
+    border: 12px #a88c00 !important;
+    -webkit-box-shadow: 0 0 5px 0 #a88c00;
+    -moz-box-shadow: 0 0 5px 0 #a88c00;
+    box-shadow: 0 0 5px 0 #a88c00;
+}
+
+/* Flechas de dar voto o quitarlo en preguntas*/
+.green:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.red:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.fa-arrow-up {
+    margin-top: -17px;
+}
+
+/* En el indice, hover a la caja de cada pregunta */
+.pregunta:hover {
+    background: #e6e6e6;
+    cursor: pointer;
+}
+
+.tag_link {
+    background-color: transparent;
+}
+
+
+@media screen and (max-width: 1130px) {
+    #info_pregunta {
+        display: flex;
+        align-content: space-evenly;
+        flex-direction: column;
+
+    }
+
+    .contenido {
+        padding: 20px;
+    }
+
+    .propietario {
+        position: absolute;
+        bottom: 3%;
+        right: 3%;
+    }
+
+    #paginacion {
+        position: absolute;
+        left: 32%;
+    }
+}
+
+.etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.question_info {
+    max-width: 30px;
+    max-height: 30px;
+    margin-left: 5px;
+}
+
+/* Loading */
+#wait {
+    z-index: 999999;
+    top: 7%;
+    left: 45%;
+}

@@ -1,0 +1,12 @@
+#user_img {
+    width: 150px;
+    height: 150px;
+}
+
+#answer {
+    font-size: 20px;
+}
+
+#tabla {
+    overflow-y: scroll;
+}
