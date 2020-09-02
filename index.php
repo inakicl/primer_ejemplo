@@ -31,9 +31,10 @@
         
         <div id="row-proyectos" class="row pl-5 pr-5">
 
-            <div class="col-12 d-flex justify-content-center text-white mt-2 border-bottom mb-3">
+            <div class="col-12 d-flex justify-content-center text-white mt-2">
                 <span class="h1">Retos destacados</span>
             </div>
+            <div class="col-12 mb-3 border-bottom borde"></div>
 
             <div class="col-12 col-lg-4  imagen-contenedor" >
                 <!-- contenedor de la descripcion de la imagen-->

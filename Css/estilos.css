@@ -10,6 +10,22 @@
 
 }
 
+@keyframes bordeAnimation {
+  0% {
+    -webkit-transform: scaleX(0.0001);
+    -ms-transform: scaleX(0.0001);
+    transform: scaleX(0.0001);
+}
+  100% {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);  }
+}
+
+.borde{
+  animation: 1.5s ease-out 0s 1 bordeAnimation;
+}
+
 .desc {
   position: relative;
   z-index: 1;
