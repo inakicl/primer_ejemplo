@@ -128,10 +128,6 @@
 </body>
 
 <script src="Librerias/jQuery/jquery-3.5.1.min.js"></script>
-<!--octokit de github para ver mis repositorios?-->
-<script type="module">
-    import { Octokit } from "https://cdn.pika.dev/@octokit/core";
-</script>
 <script src="JavaScript/funcionalidades.js" ></script>
 <script src="Librerias/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
 

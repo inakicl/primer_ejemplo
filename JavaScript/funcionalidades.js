@@ -42,50 +42,41 @@ $(document).ready(function () {
     });
 
 
-/* desc de dentro de la imagen */
-    imagen1.hover( function(){
+    /* desc de dentro de la imagen */
+    //lon hover y on load listeners para las imagenes y texto descriptivo
+    imagen1.hover(function () {
         imagen1Texto1.removeAttr('hidden');
-        console.log('hoverr')
     })
-    imagen2.hover( function(){
+    imagen2.hover(function () {
         imagen2Texto2.removeAttr('hidden');
-        console.log('hoverr')
     })
-    imagen3.hover( function(){
+    imagen3.hover(function () {
         imagen3Texto3.removeAttr('hidden');
-        console.log('hoverr')
     })
 
-
- /*  document.getElementById('imagen1').addEventListener('load', function(){
-    imagen1.removeAttr('hidden');
-   })
-*/
-
-  
-  imagen1.on('load',function() {
+    imagen1.on('load', function () {
         imagen1.removeAttr('hidden');
+        setTimeout(function () { imagen1Texto1.removeAttr('hidden') }, 2000)
     });
-    imagen2.on('load',function() {
+    imagen2.on('load', function () {
         imagen2.removeAttr('hidden');
+        setTimeout(function () { imagen2Texto2.removeAttr('hidden') }, 2000)
     });
-    imagen3.on('load',function() {
+    imagen3.on('load', function () {
         imagen3.removeAttr('hidden');
+        setTimeout(function () { imagen3Texto3.removeAttr('hidden') }, 2000)
     });
 
-    imagen3Texto3.hover(function() {
-        imagen3.hover();
-    })
+    /* Funciones */
 
-  
-function cargar() {
-    imagen1.removeAttr('hidden');
-    imagen1Texto1.removeAttr('hidden');
-    imagen2.removeAttr('hidden');
-    imagen2Texto2.removeAttr('hidden');
-    imagen3.removeAttr('hidden');
-    imagen3Texto3.removeAttr('hidden');
-}
+    /**
+     * Funcion de Forzar cargar la imagen que a veces no se ve la imagen sin esto
+     */
+    function cargar() {
+        imagen1.removeAttr('hidden');
+        imagen2.removeAttr('hidden');
+        imagen3.removeAttr('hidden');
+    }
 
     //funciones botones
     function clickInfoPersonal() {
@@ -111,6 +102,10 @@ function cargar() {
 
     }
 
+    /**
+     * El click que se le hace a la barra de tab de info personal proyectos y contacto
+     * @param int tab 
+     */
     function unClick(tab) {
         switch (tab) {
             case 0:
@@ -144,25 +139,13 @@ function cargar() {
 
     /** Empieza el codigo */
 
-    // si existe el div pa porsi. y poner por defecti seleccionado un TAB de info personal o proyectos
+    // si existe el div pa porsi. y poner por defecto seleccionado un TAB de info personal o proyectos
     if ($('#infos').length > 0) {
         divInfos = $('#infos');
         boton1.click();
     }
 
-
     // Cuando carguen las imagenes hacer que aparezcan metiendoles una clase
-   setTimeout(cargar, 1500)
-  /*  let src = false
-    do{
-        if(imagen1.src != null){
-            imagen1.removeAttr('hidden');
-src = true;
+    setTimeout(cargar, 2000)
 
-        }
-    } 
-    while(!src)
-        
-        //console.log('fsdf');
-    */
 })
