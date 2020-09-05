@@ -38,20 +38,17 @@
             </div>
             <div class="col-12 mb-3 border-bottom borde"></div>
 
-            <div class="col-12 col-lg-4  imagen-contenedor" >
+            <div class="col-12 col-lg-4  imagen-contenedor text-center" >
                 <!-- contenedor de la descripcion de la imagen-->
                 <div class="text-white desc w-75 h-75 overflow-hidden" id="texto1" hidden>
                     <!-- cabecera que contiene titulo y enlace a github-->
                     <div class="row">
-                        <div class="col-6 d-flex align-items-center ">
-                            <div class="h3 pl-3 pt-3 titulo">FNEXUS</div>
-                        </div>
-                        <div class="col-6 d-flex justify-content-center">
-                            <div class="enlace mt-1"></div>
+                        <div class="col-12 d-flex align-items-center justify-content-center">
+                            <div class="h3 pt-3 titulo">FNEXUS</div>
                         </div>
                     </div>
                     <!-- cuerpo que contiene descripción chikita-->
-                    <div class="row pl-3 pr-3">
+                    <div class="row pl-3 pr-3 descripcion">
                         <span class="col-12 pt-3 m-auto">Aplicación web mediante la cuál un empresario podrá publicitar sus productos de
                             tal manera que el usuario común pueda interactuar con el.</span>
                     </div>
@@ -60,39 +57,33 @@
                 <img src="https://drive.google.com/uc?id=1mhOH5KE8vrj29CFjqUuHqOMCVrMeIY65" alt="Proyecto imagen 1" id="imagen1" hidden
                     class="imagen" />
             </div>
-            <div class="col-12 col-lg-4 imagen-contenedor" >
+            <div class="col-12 col-lg-4 imagen-contenedor text-center" >
                 <div class="text-white desc w-75 h-75 overflow-hidden" id="texto2" hidden>
                     <!-- cabecera que contiene titulo y enlace a github-->
                     <div class="row">
-                        <div class="col-6 d-flex align-items-center ">
-                            <div class="h3 pl-3 pt-3 titulo">JetCat</div>
-                        </div>
-                        <div class="col-6 d-flex justify-content-center ">
-                            <div class="enlace mt-1"></div>
+                        <div class="col-12 d-flex align-items-center justify-content-center">
+                            <div class="h3 pt-3 titulo">JetCat</div>
                         </div>
                     </div>
                     <!-- cuerpo que contiene descripción chikita-->
                     <div class="row pl-3 pr-3">
-                        <span class="col-12 pt-3 m-auto">Juego móvil con la misma idea que el FlappyBird .</span>
+                        <span class="col-12 pt-3 m-auto descripcion">Juego móvil con la misma idea que el FlappyBird .</span>
                     </div>
                 </div>
                 <img src="https://drive.google.com/uc?id=1YSPISCZ-7xW6WX8cfn_V2eo3mNUtwHqZ" alt="Proyecto imagen 2" id="imagen2" hidden
                     class="imagen" />
             </div>
-            <div class="col-12 col-lg-4 imagen-contenedor" >
+            <div class="col-12 col-lg-4 imagen-contenedor text-center" >
                 <div class="text-white desc w-75 h-75 overflow-hidden" id="texto3" hidden>
                     <!-- cabecera que contiene titulo y enlace a github-->
                     <div class="row">
-                        <div class="col-6 d-flex align-items-center ">
-                            <div class="h3 pl-3 pt-3 titulo">CloudRoad</div>
-                        </div>
-                        <div class="col-6 d-flex justify-content-center">
-                            <div class="enlace mt-1"></div>
+                        <div class="col-12 d-flex align-items-center justify-content-center">
+                            <div class="h3 pt-3 titulo">CloudRoad</div>
                         </div>
                     </div>
                     <!-- cuerpo que contiene descripción chikita-->
                     <div class="row pl-3 pr-3 ">
-                        <span class="col-12 pt-3 m-auto">Aplicación web interna de empresa ficticia para la asistencia en carretera.</span>
+                        <span class="col-12 pt-3 m-auto descripcion">Aplicación web interna de empresa ficticia para la asistencia en carretera.</span>
                     </div>
                 </div>
                 <img src="https://drive.google.com/uc?id=1md-EcqcHOAeDff5w5WSSYtAisNJyEwtx" alt="Proyecto imagen 3" id="imagen3" hidden
