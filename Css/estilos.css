@@ -8,6 +8,8 @@
 #row-proyectos {
   background-color: #00334e;
 
+  -webkit-box-shadow: 0px 35px 50px 27px #000000; 
+box-shadow: 0px 35px 50px 27px #000000;
 }
 
 @keyframes bordeAnimation {
@@ -101,12 +103,8 @@
 }
 
 .titular {
-  background: linear-gradient(90deg, #ee7057c2 0%, #ee705715 50px, #f6f5f5 100%); 
-  background: -webkit-linear-gradient(90deg, #ee7057c2 0%, #ee705715 50px, #f6f5f5 100%); 
-  background: -moz-linear-gradient(90deg, #ee7057c2 0%, #ee705715 50px, #f6f5f5 100%); 
-
-  
-  border-left: solid 3px #ee6f57;
+  -webkit-box-shadow: inset 0px 21px 50px -30px #000000; 
+  box-shadow: inset 0px 21px 50px -30px #000000;
 }
 
 .imagen {
