@@ -3,7 +3,7 @@ $(document).ready(function () {
     // POR DEFECTO PONER QUE SE CARGUEN LOS PROYECTOS o info
 
     // it works!!!!
-    let result = null;
+   /* let result = null;
     $.ajax({
         url: "https://api.github.com/users/inakicl/repos?type=owner",
         async: false,
@@ -12,6 +12,7 @@ $(document).ready(function () {
     });
 
     console.log(result[0]);
+    */
     /* Fin pruebas  */
 
     // variables
@@ -20,12 +21,33 @@ $(document).ready(function () {
     let boton2 = $('#boton2');
     let boton3 = $('#boton3');
 
+    let goTop = $('#goTop');
+
     let imagen1 = $('#imagen1');
     let imagen1Texto1 = $('#texto1');
     let imagen2 = $('#imagen2');
     let imagen2Texto2 = $('#texto2');
     let imagen3 = $('#imagen3');
     let imagen3Texto3 = $('#texto3');
+    //variables ajax
+    let repositorios = null;
+    let estarred = null;
+
+    //llamadas ajax
+    let result = null;
+    $.ajax({
+        url: "https://api.github.com/users/inakicl/repos?type=owner",
+        async: false,
+    }).done(function (data) {
+        repositorios = data;
+    });
+    $.ajax({
+        url: "https://api.github.com/users/inakicl/starred",
+        async: false,
+    }).done(function (data) {
+        estarred = data;
+    });
+
 
     //listeners botones
     $("#boton1").click(function () {
@@ -40,6 +62,13 @@ $(document).ready(function () {
         unClick(2);
         clickContacto();
     });
+
+    $("#goTop").click(function () {
+        goToTop();
+    });
+    //listener de cuando se scrollea y hay que subir rapido
+    window.onscroll = function () { scrollFunction() };
+
 
 
     /* desc de dentro de la imagen */
@@ -79,28 +108,6 @@ $(document).ready(function () {
     }
 
     //funciones botones
-    function clickInfoPersonal() {
-        divInfos.empty();
-
-        divInfos.append('' +
-            '<div class="col-12 bg-especial w-100 p-0 "> auxilio</div>');
-
-
-        /*divInfos.empty();
-
-        divInfos.append('<div class="bg-warning"> f</div>')
-*/
-
-
-        /*   $.ajax({
-               url: "infor.html",
-               async: false,
-           }).done(function (data) {
-               divInfos.html(data);
-           })
-   */
-
-    }
 
     /**
      * El click que se le hace a la barra de tab de info personal proyectos y contacto
@@ -126,17 +133,96 @@ $(document).ready(function () {
         }
     }
 
-    function clickProyectos() {
+    function clickInfoPersonal() {
         divInfos.empty();
 
-        divInfos.append('<div class="col-12 bg-especial w-100 p-0 "> me</div>')
+        divInfos.append('' +
+            '<div class="col-12 bg-especial">' +
+            '<div class="bg-blanco rounded">'+
+            '<p class="m-4">' +
+            '    Soy <span class="font-weight-bold ">Iñaki Caballero </span> y soy programador web y multiplataforma de <span class="font-weight-bold ">Vitoria-Gasteiz.</span>' +
+            '</p>' +
+            '<p class="m-4">Tengo estudios de los grados profesionales de Egibide en Desarrollo de aplicaciones multiplataforma y Desarrollo' +
+            'de aplicaciones web.' +
+            'También tengo cursado un grado de sistemas microinformáticos y redes.' +
+            '</p>' +
+            '<p class="m-4">' +
+            '<span class="font-weight-bold"> Lenguajes # :</span> Java, swift, javascript(jQuery), php, framework Laravel, framework UDA (spring).' +
+            '</p>' +
+            '<p class="m-4">' +
+            'Como experiencia laboral tengo un año trabajado en la empresa Ibermática con formación dual.' +
+            '</p>' +
+            '</div>'+
+            '</div>');
+
     }
+
+    /**
+     * Funcion de boton click ver proyectos/repositorios
+     */
+    function clickProyectos() {
+        //vaciar el div contenedor
+        divInfos.empty();
+
+        // poner los repositorios en Estrella de los que he trabajado con los compas
+        estarred.forEach(element => {
+            // a veces aparece en null el lenguaje porque no tiene nada en el repositorio, para evitar eso poner frase por defecto
+            let lenguajes = element.language;
+            if (lenguajes == "null") {
+                lenguajes = "Lenguaje no detectado";
+            }
+            divInfos.append('<div class="card bg-especial col-12 rounded-0" >' +
+                '<a class="card-body border rounded m-2" href="' + element.html_url + '">' +
+                '<h5 class="card-title">Repositorio: <span class="repositorio">' + element.full_name + '</span></h5>' +
+                '<h6 class="card-subtitle mb-2">Lenguaje principal: <span class="lenguaje">' + lenguajes + '</span></h6>' +
+                '</a>' +
+                '</div>' +
+                '</div>');
+        });
+        // añadir el resto de repositorios
+        repositorios.forEach(element => {
+            let lenguajes = element.language;
+            if (lenguajes == null) {
+                lenguajes = "Lenguaje no detectado";
+            }
+            divInfos.append('<div class="card bg-especial col-12 rounded-0" >' +
+                '<a class="card-body border rounded m-2" href="' + element.html_url + '">' +
+                '<h5 class="card-title">Repositorio: <span class="repositorio">' + element.full_name + '</span> </h5>' +
+                '<h6 class="card-subtitle mb-2">Lenguaje principal: <span class="lenguaje">' + lenguajes + '</span></h6>' +
+                '</a>' +
+                '</div>' +
+                '</div>');
+        });
+
+    }
+
     function clickContacto() {
         divInfos.empty();
 
-        divInfos.append('<div class="col-12 bg-especial w-100 p-0 "> ' +
-            '<div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="es_ES" data-type="horizontal" data-theme="light" data-vanity="iñaki-caballero-lópez-0757361b2"><a class="LI-simple-link" href="https://es.linkedin.com/in/i%C3%B1aki-caballero-l%C3%B3pez-0757361b2?trk=profile-badge">Iñaki Caballero López</a></div> ' +
-            '</div> d')
+        divInfos.append('<div class="bg-especial col-12 rounded-0" >WIP!!!!'+
+        '<div class="bg-blanco">'+
+            '<span>nombre</span>'+
+            '<span>email</span>'+
+            '<span>telefono</span>'+
+            '<span>curriculum vitae</span>'+
+        '</div>'+
+    '</div>');
+    }
+
+
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            goTop.show();
+        } else {
+            goTop.hide();
+        }
+    }
+
+    // ir al principio del documento
+    function goToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
     /** Empieza el codigo */
@@ -144,7 +230,7 @@ $(document).ready(function () {
     // si existe el div pa porsi. y poner por defecto seleccionado un TAB de info personal o proyectos
     if ($('#infos').length > 0) {
         divInfos = $('#infos');
-        boton1.click();
+        boton2.click();
     }
 
     // Cuando carguen las imagenes hacer que aparezcan metiendoles una clase

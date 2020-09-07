@@ -4,6 +4,9 @@
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+          integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+
 <link rel="stylesheet" type="text/css" href="Librerias/bootstrap-4.5.2-dist/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="Css/estilos.css" />
 
@@ -22,7 +25,7 @@
         <!-- Lo que se ve en grande-->
         <div class="row p-5 sombra-borde-top">
             <div class="col-12 col-lg-9 order-lg-1">
-                <span class="h2 font-weight-bold text-danger">Iñaki Caballero</span>
+                <span class="h2 font-weight-bold texto-rojo">Iñaki Caballero</span>
             </div>
             <div class="col-12 col-lg-3 order-lg-2 order-3 mt-3 mt-lg-0">
                 <div class="row">
@@ -50,7 +53,7 @@
         <div id="row-proyectos" class="row pl-5 pr-5">
 
             <div class="col-12 d-flex justify-content-center text-white mt-2">
-                <span class="h1">Retos destacados</span>
+                <span class="h1">Retos destacados realizados</span>
             </div>
             <div class="col-12 mb-3 border-bottom borde"></div>
 
@@ -123,14 +126,17 @@
             <div class="offset-lg-3 offset-0 col-md-6 col-12 ">
                 <div class="row" id="infos">
 
-                </div>
-
-
-
-
             </div>
         </div>
     </div>
+
+    <footer class="row bg-dark text-light">
+        <p class="col-12 d-flex justify-content-center align-items-center pt-2 ">
+            Powered by WikitesEngine 1.0 2020 Iñaki Caballero
+        </p>    
+    </footer>
+    
+    <button id="goTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
 </body>
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
