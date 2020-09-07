@@ -134,7 +134,9 @@ $(document).ready(function () {
     function clickContacto() {
         divInfos.empty();
 
-        divInfos.append('<div class="col-12 bg-especial w-100 p-0 "> desmayo</div>')
+        divInfos.append('<div class="col-12 bg-especial w-100 p-0 "> ' +
+            '<div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="es_ES" data-type="horizontal" data-theme="light" data-vanity="iñaki-caballero-lópez-0757361b2"><a class="LI-simple-link" href="https://es.linkedin.com/in/i%C3%B1aki-caballero-l%C3%B3pez-0757361b2?trk=profile-badge">Iñaki Caballero López</a></div> ' +
+            '</div> d')
     }
 
     /** Empieza el codigo */

@@ -20,11 +20,27 @@
     <div class="container-fluid m-auto">
 
         <!-- Lo que se ve en grande-->
-        <div class="row align-self-center p-5 titular">
-            <div class="col-12">
-                <span class="h2 font-weight-bold text-danger ">Iñaki Caballero</span>
+        <div class="row p-5 sombra-borde-top">
+            <div class="col-12 col-lg-9 order-lg-1">
+                <span class="h2 font-weight-bold text-danger">Iñaki Caballero</span>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-lg-3 order-lg-2 order-3 mt-3 mt-lg-0">
+                <div class="row">
+                    <div class="col-6" id="icono-in">
+                         <a href="http://www.linkedin.com/in/iñaki-caballero-lópez-0757361b2" target="blank_">
+                            <img src="https://cdn.icon-icons.com/icons2/1906/PNG/512/iconfinder-linkedin-4550875_121338.png" alt="linkedin"
+                            class="img-fluid img iconos" />
+                        </a>
+                    </div>
+                    <div class="col-6" id="icono-git">
+                        <a href="https://github.com/inakicl" target="blank_">
+                            <img src="https://cdn.icon-icons.com/icons2/936/PNG/512/github-logo_icon-icons.com_73546.png" alt="github"
+                            class="img-fluid img iconos" />
+                        </a>
+                    </div>
+            </div>
+            </div>
+            <div class="col-12 col-lg-9 order-lg-3">
                 <span class="h2 "> Programador web, m&oacute;vil y escritorio.</span>
             </div>
         </div>
@@ -112,14 +128,12 @@
 
 
 
-
             </div>
         </div>
     </div>
 
-
 </body>
-
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 <script src="Librerias/jQuery/jquery-3.5.1.min.js"></script>
 <script src="JavaScript/funcionalidades.js" ></script>
 <script src="Librerias/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
