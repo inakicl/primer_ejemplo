@@ -211,7 +211,7 @@ $(document).ready(function () {
             '<i class="fab fa-laravel fa-2x m-2"></i>' +
             '<img src="https://uda-ejie.github.io/images/uda-big-250.png" class="imagen-uda ">' +
             '<i class="fab fa-html5 fa-2x m-2"></i>' +
-            '<i class="fab fa-css3 fa-2x m-2"></i>' +
+            '<i class="fab fa-css3-alt fa-2x m-2"></i>' +
             '</div>' +
             '</div>' +
 
@@ -262,12 +262,21 @@ $(document).ready(function () {
     function clickContacto() {
         divInfos.empty();
 
-        divInfos.append('<div class="bg-especial col-12 rounded-0" >WIP!!!!' +
-            '<div class="bg-blanco">' +
-            '<span>nombre</span>' +
-            '<span>email</span>' +
-            '<span>telefono</span>' +
-            '<span>curriculum vitae</span>' +
+        divInfos.append('' +
+            '<div class="col-12 bg-especial">' +
+            '<div class="row m-4 d-flex ">' +
+            '<div class="m-3">Curriculum vitae <i class="fas fa-arrow-right"></i></div>' +
+            '<div class="ml-2">' +
+            '<a href="https://drive.google.com/uc?id=1VB6D5cERRJ5ikZNJWUVFv60qkzIr_ozd" target="_blank">' +
+            '<i class="far fa-file-pdf fa-3x fab texto-rojo w-"></i>' +
+            '</a>' +
+            '</div>' +
+            '</div>' +
+            '<div class="row m-4 d-flex ">' +
+            '<div class="m-3">E-mail / correo electr&oacute;nico : i_caballero_lopez@hotmail.com </div>' +
+            '</div>' +
+            '<div class="row m-4 d-flex ">' +
+            '<div class="m-3">Tele&eacute;fono : 697 666 467 </div>' +
             '</div>' +
             '</div>');
     }

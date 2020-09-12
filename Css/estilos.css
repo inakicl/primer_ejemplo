@@ -249,3 +249,6 @@ box-shadow: 0px 35px 50px 27px #000000;
   .fas, .fab{
     text-shadow: 0 0 3px #000;    
   }
+  .fa-file-pdf {
+    width: 0px;
+  }
