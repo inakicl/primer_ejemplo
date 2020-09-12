@@ -113,25 +113,25 @@
         <!-- Caja de navegacion simple-->
         <div class="row tab-padre pt-5 ">
             <div class="tab  offset-lg-3 offset-0 col-lg-2 col-12 p-0">
-                <input id="boton1" type="button" class="w-100 h-100 " value="Info.Personal">
+                <input id="boton1" type="button" class="w-100 h-100 " value="Sobre mí">
             </div>
             <div class="tab col-lg-2 col-12 p-0">
-                <input id="boton2" type="button" class="w-100 h-100" value="Más proyectos">
+                <input id="boton2" type="button" class="w-100 h-100" value="Repositorios git">
             </div>
             <div class="tab col-lg-2 col-12 p-0">
                 <input id="boton3" type="button" class="w-100 h-100" value="Contacto">
             </div>
 
             <!-- Caja para cargar la info mas contacto (cv, github, egibide, email, etc.)-->
-            <div class="offset-lg-3 offset-0 col-md-6 col-12 ">
+            <div class="offset-lg-3 offset-0 col-lg-6 col-12 mb-5">
                 <div class="row" id="infos">
-
+                
+                </div>
             </div>
-        </div>
     </div>
 
     <footer class="row bg-dark text-light">
-        <p class="col-12 d-flex justify-content-center align-items-center pt-2 ">
+        <p class="col-12 d-flex justify-content-center align-items-center pt-3 ">
             Powered by WikitesEngine 1.0 2020 Iñaki Caballero
         </p>    
     </footer>
