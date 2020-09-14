@@ -31,13 +31,13 @@
                 <div class="row">
                     <div class="col-6" id="icono-in">
                          <a href="http://www.linkedin.com/in/iñaki-caballero-lópez-0757361b2" target="blank_">
-                            <img src="https://cdn.icon-icons.com/icons2/1906/PNG/512/iconfinder-linkedin-4550875_121338.png" alt="linkedin"
+                            <img src="https://drive.google.com/thumbnail?id=10NLpuOBpcjECdrl03-5L3BCR3_RW6mgU" alt="linkedin"
                             class="img-fluid img iconos" />
                         </a>
                     </div>
                     <div class="col-6" id="icono-git">
                         <a href="https://github.com/inakicl" target="blank_">
-                            <img src="https://cdn.icon-icons.com/icons2/936/PNG/512/github-logo_icon-icons.com_73546.png" alt="github"
+                            <img src="https://drive.google.com/thumbnail?id=18nhGpUsh-GNbuWCSr-G8VFo_eKmj0gK_" alt="github"
                             class="img-fluid img iconos" />
                         </a>
                     </div>
