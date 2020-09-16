@@ -21,6 +21,7 @@
 <body class="el-cuerpo-mi-rey">
 <?php 
 echo 'prueba php';
+include_once '/variables.php';
 ?>    
     <!-- Cuerpo/contenedor principal de la pagina-->
     <div class="container-fluid m-auto">
