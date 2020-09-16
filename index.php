@@ -1,5 +1,9 @@
 ﻿<?php 
     require_once 'variables.php';
+    require_once 'Paginas_extra/tab-1.php';
+    require_once 'Paginas_extra/tab-2.php';
+    require_once 'Paginas_extra/tab-3.php';
+
 ?>
 
 <head>
