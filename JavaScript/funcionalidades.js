@@ -2,26 +2,13 @@ $(document).ready(function () {
 
     // POR DEFECTO PONER QUE SE CARGUEN LOS PROYECTOS o info
 
-    // it works!!!!
-    /* let result = null;
-     $.ajax({
-         url: "https://api.github.com/users/inakicl/repos?type=owner",
-         async: false,
-     }).done(function (data) {
-         result = data;
-     });
- 
-     console.log(result[0]);
-     */
-    /* Fin pruebas  */
-
     // variables
     let divInfos = null;
     let boton1 = $('#boton1');
     let boton2 = $('#boton2');
     let boton3 = $('#boton3');
 
-    let goTop = $('#goTop');
+    let botonGoTop = $('#goTop');
 
     let imagen1 = $('#imagen1');
     let imagen1Texto1 = $('#texto1');
@@ -29,10 +16,10 @@ $(document).ready(function () {
     let imagen2Texto2 = $('#texto2');
     let imagen3 = $('#imagen3');
     let imagen3Texto3 = $('#texto3');
+
     //variables ajax
     let repositorios = null;
     let estarred = null;
-
     //llamadas ajax
     let result = null;
     $.ajax({
@@ -67,8 +54,9 @@ $(document).ready(function () {
         goToTop();
     });
     //listener de cuando se scrollea y hay que subir rapido
-    window.onscroll = function () { scrollFunction() };
-
+    window.onscroll = function () {
+        scrollFunction()
+    };
 
 
     /* desc de dentro de la imagen */
@@ -133,6 +121,9 @@ $(document).ready(function () {
         }
     }
 
+    /**
+     * 
+     */
     function clickInfoPersonal() {
         divInfos.empty();
 
@@ -285,9 +276,9 @@ $(document).ready(function () {
 
     function scrollFunction() {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            goTop.show();
+            botonGoTop.show();
         } else {
-            goTop.hide();
+            botonGoTop.hide();
         }
     }
 
