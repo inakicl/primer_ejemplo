@@ -1,5 +1,4 @@
 <?php
-
 // Listado de variables string/etc para textos y similares de la plagina principal; así queda mas limpito y chachi
 
 // Nombres y textos
@@ -30,11 +29,6 @@ $info_parte_3 = 'También tengo cursado un grado de sistemas microinformáticos 
 $cv = 'Curriculum vitae';
 $email_texto = 'E-mail / correo electrónico : i_caballero_lopez@hotmail.com';
 $telefono_texto = 'Teléfono : 697 666 467 ';
-$repositorio = 'Repositorio';
-$lenguaje_principal = 'Lenguaje principal';
-
-
-
 $footer = 'Powered by WikitesEngine 1.0 2020 Iñaki Caballero';
 
 // Enlaces
