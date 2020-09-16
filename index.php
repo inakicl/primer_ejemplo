@@ -1,5 +1,5 @@
 ﻿<?php 
-    require_once '/variables/variables.php';
+    require_once 'variables/variables.php';
 ?>    
 
 <!DOCTYPE html>
