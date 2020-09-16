@@ -18,7 +18,6 @@ $(document).ready(function () {
     let repositorios = null;
     let estarred = null;
     //llamadas ajax
-    let result = null;
     $.ajax({
         url: "https://api.github.com/users/inakicl/repos?type=owner",
         async: false,
@@ -137,30 +136,31 @@ $(document).ready(function () {
         $('#tab-2').show();
 
         // poner los repositorios en Estrella de los que he trabajado con los compas
-        estarred.forEach(element => {
-            // a veces aparece en null el lenguaje porque no tiene nada en el repositorio, para evitar eso poner frase por defecto
-            let lenguajes = element.language;
-            if (lenguajes == "null") {
-                lenguajes = "Lenguaje no detectado";
-            }
-            $('#tab-2').append('<div class="card bg-especial col-12 rounded-0" >' +
-                '<a class="card-body border rounded m-2" href="' + element.html_url + '">' +
-                '<h5 class="card-title">Repositorio: <span class="repositorio">' + element.full_name + '</span></h5>' +
-                '<h6 class="card-subtitle mb-2">Lenguaje principal: <span class="lenguaje">' + lenguajes + '</span></h6>' +
-                '</a>' +
-                '</div>' +
-                '</div>');
-        });
+        anyadir(estarred);
+
         // añadir el resto de repositorios
-        repositorios.forEach(element => {
+        anyadir(repositorios);
+
+
+    }
+
+    /**
+     * Funcion para evitar repetir codigo de añadir un div
+     * @param {*} element 
+     * @param {*} lenguajes 
+     */
+    function anyadir(array) {
+        array.forEach(element => {
+            // a veces aparece en null el lenguaje porque no tiene nada en el repositorio, para evitar eso poner frase por defecto
             let lenguajes = element.language;
             if (lenguajes == null) {
                 lenguajes = "Lenguaje no detectado";
             }
+
             $('#tab-2').append('<div class="card bg-especial col-12 rounded-0" >' +
                 '<a class="card-body border rounded m-2" href="' + element.html_url + '">' +
-                '<h5 class="card-title">Repositorio: <span class="repositorio">' + element.full_name + '</span> </h5>' +
-                '<h6 class="card-subtitle mb-2">Lenguaje principal: <span class="lenguaje">' + lenguajes + '</span></h6>' +
+                '<h5 class="card-title"><?= $repositorio?>: <span class="repositorio">' + element.full_name + '</span> </h5>' +
+                '<h6 class="card-subtitle mb-2"><?= $repositorio?>: <span class="lenguaje">' + lenguajes + '</span></h6>' +
                 '</a>' +
                 '</div>' +
                 '</div>');
@@ -197,7 +197,7 @@ $(document).ready(function () {
         document.documentElement.scrollTop = 0;
     }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /** Empieza el codigo */
     boton1.click();
 
