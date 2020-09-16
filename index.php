@@ -1,9 +1,5 @@
 ﻿<?php 
     require_once 'variables.php';
-    require_once 'Paginas_extra/tab-1.php';
-    require_once 'Paginas_extra/tab-2.php';
-    require_once 'Paginas_extra/tab-3.php';
-
 ?>
 
 <head>
@@ -129,7 +125,11 @@
             <!-- Caja para cargar la info mas contacto (cv, github, egibide, email, etc.)-->
             <div class="offset-lg-3 offset-0 col-lg-6 col-12 mb-5">
                 <div class="row" id="infos">
-                
+                    <?php
+                        require_once 'Paginas_extra/tab-1.php';
+                        require_once 'Paginas_extra/tab-2.php';
+                        require_once 'Paginas_extra/tab-3.php';
+                    ?>
                 </div>
             </div>
     </div>

@@ -1,4 +1,4 @@
-<div class="col-12 bg-especial">
+<div class="col-12 bg-especial" id="tab-1">
     <div class="row m-4 ">
         <div class="col-12 col-lg-4 ">
             <div class="row text-center">
