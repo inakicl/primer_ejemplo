@@ -1,4 +1,5 @@
-﻿<head>
+﻿
+<head>
     <html lang="es" xmlns="http://www.w3.org/1999/xhtml">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
 
@@ -18,6 +19,15 @@
 
 </head>
 
+<?php
+try {
+    require_once 'variables/variables.php';
+} catch(Exception $e) {
+    echo $e->getMessage();
+    echo $e;
+    echo 'error';
+}
+?>    
 <body class="el-cuerpo-mi-rey">
 
 <? echo $title ?>
