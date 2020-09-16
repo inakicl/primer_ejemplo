@@ -159,8 +159,8 @@ $(document).ready(function () {
 
             $('#tab-2').append('<div class="card bg-especial col-12 rounded-0" >' +
                 '<a class="card-body border rounded m-2" href="' + element.html_url + '">' +
-                '<h5 class="card-title"><?= $repositorio?>: <span class="repositorio">' + element.full_name + '</span> </h5>' +
-                '<h6 class="card-subtitle mb-2"><?= $repositorio?>: <span class="lenguaje">' + lenguajes + '</span></h6>' +
+                '<h5 class="card-title">Repositorio: <span class="repositorio">' + element.full_name + '</span> </h5>' +
+                '<h6 class="card-subtitle mb-2">Lenguaje principal: <span class="lenguaje">' + lenguajes + '</span></h6>' +
                 '</a>' +
                 '</div>' +
                 '</div>');
