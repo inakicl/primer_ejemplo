@@ -12,7 +12,7 @@ $(document).ready(function () {
             console.log(vari);
         });
 
-      /*  $('.el-cuerpo-mi-rey').append('<?php'+
+       $('.el-cuerpo-mi-rey').append('<?php'+
         'try {'+
             'include "variables/variables.php";'+
         '} catch(Exception $e) {'+
@@ -21,8 +21,8 @@ $(document).ready(function () {
             'echo "error";'+
         '}'+
         '?>');
-        */
-       $('.el-cuerpo-mi-rey').append(vari);
+        
+      // $('.el-cuerpo-mi-rey').append(vari);
     }
 php();
 
