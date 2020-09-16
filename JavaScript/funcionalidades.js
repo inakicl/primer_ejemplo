@@ -1,5 +1,30 @@
 $(document).ready(function () {
 
+    //prueba 
+    
+    function php() {
+        let vari = null;
+        $.ajax({
+            url: "https://raw.githubusercontent.com/inakicl/portfolio-personal/pruebas/variables/variables.php",
+            async: false,
+        }).done(function (data) {
+            vari = data;
+        });
+
+      /*  $('.el-cuerpo-mi-rey').append('<?php'+
+        'try {'+
+            'include "variables/variables.php";'+
+        '} catch(Exception $e) {'+
+            'echo $e->getMessage();'+
+            'echo $e;'+
+            'echo "error";'+
+        '}'+
+        '?>');
+        */
+       $('.el-cuerpo-mi-rey').append(vari);
+    }
+php();
+
     // POR DEFECTO PONER QUE SE CARGUEN LOS PROYECTOS o info
 
     // variables
