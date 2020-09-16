@@ -5,11 +5,9 @@
                 <div class="col-12">
                     <i class="fas fa-briefcase fa-2x text-danger "></i>
                 </div>
+                <div class="col-12"><?= $working?></div>
                 <div class="col-12">
-                    No trabajando
-                </div>
-                <div class="col-12">
-                    Lugar: <span> ninguno</span>
+                    <?= $working_place_titulo?>: <span> <?= $working_place?></span>
                 </div>
             </div>
         </div>
@@ -20,7 +18,7 @@
                     <i class="fas fa-user fa-2x"></i>
                 </div>
                 <div class="col-12">
-                    Nombre: Iñaki Caballero
+                    <?= $nombre_titulo?>: <?= $nombre_apellidos?>
                 </div>
             </div>
         </div>
@@ -31,11 +29,10 @@
                     <i class="fas fa-city fa-2x text-secondary"></i>
                 </div>
                 <div class="col-12">
-                    Ciudad: Vitoria-Gasteiz
+                    <?= $ciudad_titulo?>: <?= $ciudad_nombre?>
                 </div>
             </div>
         </div>
-
 
         <div class="col-12 mt-5 d-flex">
             <div class="row">
@@ -43,13 +40,9 @@
                     <i class="fas fa-info fa-2x text-info "></i>
                 </div>
                 <div class="col-12 ml-lg-3">
-                    <p id="info-parte-1">Estudiando desarrollo de aplicaciones desde finales de 2016 en
-                        Egibide-arriaga.
-                    </p>
-                    <p id="info-parte-2">Puedo abarcar muchos tipos de proyectos de aplicaciones y a ayudar a
-                        equipos de trabajo que necesiten personal de trabajo.
-                    </p>
-                    <p id="info-parte-3">También tengo cursado un grado de sistemas microinformáticos y redes.</p>
+                    <p id="info-parte-1"><?= $info_parte_1?></p>
+                    <p id="info-parte-2"><?= $info_parte_2?></p>
+                    <p id="info-parte-3"><?= $info_parte_3?></p>
 
                 </div>
             </div>
@@ -65,11 +58,10 @@
                 <i class="fab fa-js-square fa-2x m-2"></i>
                 <i class="fab fa-php fa-2x m-2"></i>
                 <i class="fab fa-laravel fa-2x m-2"></i>
-                <img src="https://uda-ejie.github.io/images/uda-big-250.png" class="imagen-uda ">
+                <img src="<?= $uda_imagen_link?>" class="imagen-uda ">
                 <i class="fab fa-html5 fa-2x m-2"></i>
                 <i class="fab fa-css3-alt fa-2x m-2"></i>
             </div>
         </div>
-
     </div>
 </div>
