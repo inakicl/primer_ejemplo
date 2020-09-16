@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+include 'variables.php';
+?>
+
+<!DOCTYPE html>
 
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
@@ -12,7 +16,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>PortFolio personal de Iñaki</title>
+    <title><?=$title;?></title>
     <link rel="icon" href="https://drive.google.com/thumbnail?id=1K6cGrtmbDGXZYLxO1fVy4gsHJohKczw-"
         type="image/icon type">
 
@@ -86,7 +90,7 @@
                     </div>
                     <!-- cuerpo que contiene descripción chikita-->
                     <div class="row pl-3 pr-3">
-                        <span class="col-12 pt-3 m-auto descripcion">Juego móvil con la misma idea que el FlappyBird .</span>
+                        <span class="col-12 pt-3 m-auto descripcion">Juego móvil con la misma idea que el FlappyBird.</span>
                     </div>
                 </div>
                 <img src="https://drive.google.com/uc?id=1YSPISCZ-7xW6WX8cfn_V2eo3mNUtwHqZ" alt="Proyecto imagen 2" id="imagen2" hidden
@@ -110,7 +114,7 @@
             </div>
         </div>
 
-        <!-- Caja de navegacion simple-->
+        <!-- Botones tab de mostrar informacion sobre mí-->
         <div class="row tab-padre pt-5 ">
             <div class="tab  offset-lg-3 offset-0 col-lg-2 col-12 p-0">
                 <input id="boton1" type="button" class="w-100 h-100 " value="Sobre mí">
