@@ -1,5 +1,9 @@
-﻿<?php 
+﻿<?php
+try {
     require_once 'variables/variables.php';
+} catch(Exception $e) {
+    echo $e->getMessage();
+}
 ?>    
 
 <!DOCTYPE html>
