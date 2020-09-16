@@ -1,7 +1,7 @@
 <div class="col-12 bg-especial" id="tab-3">
     <div class="row m-4 d-flex ">
         <div class="m-3">
-            <?= $cv?><i class="fas fa-arrow-right"></i>
+            <?= $cv?><i class="fas fa-arrow-right ml-3"></i>
         </div>
         <div class="ml-2">
             <a href="<?= $cv_link?>" target="_blank">
