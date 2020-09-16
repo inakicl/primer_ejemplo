@@ -127,7 +127,11 @@ $(document).ready(function () {
     function clickInfoPersonal() {
         divInfos.empty();
 
-        divInfos.append('' +
+        divInfos.append('<?php '+
+            'include "tab-1.php";'+
+            '?>');
+
+      /*  divInfos.append('' +
             '<div class="col-12 bg-especial"> ' +
             '<div class="row m-4 ">' +
 
@@ -208,7 +212,7 @@ $(document).ready(function () {
 
             '</div>' +
             '</div>');
-
+        */
     }
 
     /**
