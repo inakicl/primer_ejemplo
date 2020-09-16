@@ -1,9 +1,6 @@
 $(document).ready(function () {
 
-    // POR DEFECTO PONER QUE SE CARGUEN LOS PROYECTOS o info
-
     // variables
-    let divInfos = null;
     let boton1 = $('#boton1');
     let boton2 = $('#boton2');
     let boton3 = $('#boton3');
@@ -37,17 +34,17 @@ $(document).ready(function () {
 
 
     //listeners botones
-    $("#boton1").click(function () {
-        unClick(0);
-        clickInfoPersonal();
+    boton1.click(function () {
+        clicATab(0);
+        clickTab_1();
     });
-    $("#boton2").click(function () {
-        unClick(1);
-        clickProyectos();
+    boton2.click(function () {
+        clicATab(1);
+        clickTab_2();
     });
-    $("#boton3").click(function () {
-        unClick(2);
-        clickContacto();
+    boton3.click(function () {
+        clicATab(2);
+        clickTab_3();
     });
 
     $("#goTop").click(function () {
@@ -55,7 +52,7 @@ $(document).ready(function () {
     });
     //listener de cuando se scrollea y hay que subir rapido
     window.onscroll = function () {
-        scrollFunction()
+        scrollShowButton()
     };
 
 
@@ -89,7 +86,7 @@ $(document).ready(function () {
     /**
      * Funcion de Forzar cargar la imagen que a veces no se ve la imagen sin esto
      */
-    function cargar() {
+    function forzarCargarImagen() {
         imagen1.removeAttr('hidden');
         imagen2.removeAttr('hidden');
         imagen3.removeAttr('hidden');
@@ -101,7 +98,7 @@ $(document).ready(function () {
      * El click que se le hace a la barra de tab de info personal proyectos y contacto
      * @param int tab 
      */
-    function unClick(tab) {
+    function clicATab(tab) {
         switch (tab) {
             case 0:
                 boton1.addClass('seleccionado');
@@ -122,18 +119,19 @@ $(document).ready(function () {
     }
 
     /**
-     * 
+     * Funcion de cuando se le hace click al boton 1 de los tabs (ver info personal)
      */
-    function clickInfoPersonal() {
+    function clickTab_1() {
         $('#tab-2').hide();
         $('#tab-3').hide();
         $('#tab-1').show();
     }
 
     /**
-     * Funcion de boton click ver proyectos/repositorios
+     * Funcion de cuando se le hace click al boton 2 de los tabs (ver repositorios/proyectos)
      */
-    function clickProyectos() {
+
+    function clickTab_2() {
         $('#tab-1').hide();
         $('#tab-3').hide();
         $('#tab-2').show();
@@ -170,15 +168,20 @@ $(document).ready(function () {
 
     }
 
-    function clickContacto() {
+    /**
+     * Funcion de cuando se le hace click al boton 3 de los tabs
+     */
+    function clickTab_3() {
         $('#tab-2').hide();
         $('#tab-1').hide();
         $('#tab-3').show();
     }
 
 
-
-    function scrollFunction() {
+    /**
+     * Funcion para que aparezca el boton de ir al principio de la página
+     */
+    function scrollShowButton() {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             botonGoTop.show();
         } else {
@@ -186,21 +189,19 @@ $(document).ready(function () {
         }
     }
 
-    // ir al principio del documento
+    /**
+     * Funcion para ir al principio del documento
+     */
     function goToTop() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /** Empieza el codigo */
-
-    // si existe el div pa porsi. y poner por defecto seleccionado un TAB de info personal o proyectos
-    if ($('#infos').length > 0) {
-        divInfos = $('#infos');
-        boton1.click();
-    }
+    boton1.click();
 
     // Cuando carguen las imagenes hacer que aparezcan metiendoles una clase
-    setTimeout(cargar, 2000)
+    setTimeout(forzarCargarImagen, 2000)
 
 })
