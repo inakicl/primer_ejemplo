@@ -15,7 +15,9 @@
     <link rel="stylesheet" type="text/css" href="Css/estilos.css" />
     <meta charset="utf-8" />
 
-    <title><?= $title; 'prueba php' ?></title>
+    <title>
+    <?= "prueba php" ?>    
+    </title>
     <link rel="icon" href="https://drive.google.com/thumbnail?id=1K6cGrtmbDGXZYLxO1fVy4gsHJohKczw-"
         type="image/icon type">
 
