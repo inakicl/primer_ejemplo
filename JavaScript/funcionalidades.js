@@ -125,15 +125,18 @@ $(document).ready(function () {
      * 
      */
     function clickInfoPersonal() {
-        $('#tab-2').hide;
-        $('#tab-3').hide;
-        $('#tab-1').show;
+        $('#tab-2').hide();
+        $('#tab-3').hide();
+        $('#tab-1').show();
     }
 
     /**
      * Funcion de boton click ver proyectos/repositorios
      */
     function clickProyectos() {
+        $('#tab-1').hide();
+        $('#tab-3').hide();
+        $('#tab-2').show();
 
         // poner los repositorios en Estrella de los que he trabajado con los compas
         estarred.forEach(element => {
@@ -168,9 +171,9 @@ $(document).ready(function () {
     }
 
     function clickContacto() {
-        $('#tab-2').hide;
-        $('#tab-1').hide;
-        $('#tab-3').show;
+        $('#tab-2').hide();
+        $('#tab-1').hide();
+        $('#tab-3').show();
     }
 
 
