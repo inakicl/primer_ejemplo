@@ -25,6 +25,7 @@
 
 <body class="el-cuerpo-mi-rey">
 
+<? echo $title ?>
     <!-- Cuerpo/contenedor principal de la pagina-->
     <div class="container-fluid m-auto">
 
