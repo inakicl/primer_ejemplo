@@ -1,6 +1,4 @@
-﻿<?php
-include 'variables.php';
-?>
+﻿
 
 <!DOCTYPE html>
 
@@ -16,7 +14,7 @@ include 'variables.php';
 
 <head>
     <meta charset="utf-8" />
-    <title><?=$title;?></title>
+    <title>d</title>
     <link rel="icon" href="https://drive.google.com/thumbnail?id=1K6cGrtmbDGXZYLxO1fVy4gsHJohKczw-"
         type="image/icon type">
 
