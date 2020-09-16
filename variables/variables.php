@@ -18,7 +18,6 @@ $tab_boton_1_value = 'Sobre mí';
 $tab_boton_2_value = 'Repositorios git';
 $tab_boton_3_value = 'Contacto';
 
-
 $footer = 'Powered by WikitesEngine 1.0 2020 Iñaki Caballero';
 
 // Enlaces
