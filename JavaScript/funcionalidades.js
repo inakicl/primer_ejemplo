@@ -9,6 +9,7 @@ $(document).ready(function () {
             async: false,
         }).done(function (data) {
             vari = data;
+            console.log(vari);
         });
 
       /*  $('.el-cuerpo-mi-rey').append('<?php'+
