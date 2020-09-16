@@ -11,9 +11,9 @@ $reto1_titulo = 'FNEXUS';
 $reto1_cuerpo = 'Aplicación web mediante la cuál un empresario podrá publicitar sus productos de
 tal manera que el usuario común pueda interactuar con el.';
 $reto2_titulo = 'JetCat';
-$reto2_cuerpo = 'Juego móvil con la misma idea que el FlappyBird.'
+$reto2_cuerpo = 'Juego móvil con la misma idea que el FlappyBird.';
 $reto3_titulo = 'CloudRoad';
-$reto3_cuerpo = 'Aplicación web interna de empresa ficticia para la asistencia en carretera.'
+$reto3_cuerpo = 'Aplicación web interna de empresa ficticia para la asistencia en carretera.';
 $tab_boton_1_value = 'Sobre mí';
 $tab_boton_2_value = 'Repositorios git';
 $tab_boton_3_value = 'Contacto';
