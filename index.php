@@ -1,5 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    include_once '/variables.php';
+?>    
 
+<!DOCTYPE html>
 <head>
     <html lang="es" xmlns="http://www.w3.org/1999/xhtml">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
@@ -12,17 +15,14 @@
     <link rel="stylesheet" type="text/css" href="Css/estilos.css" />
     <meta charset="utf-8" />
 
-    <title>d</title>
+    <title><?= $title; ?></title>
     <link rel="icon" href="https://drive.google.com/thumbnail?id=1K6cGrtmbDGXZYLxO1fVy4gsHJohKczw-"
         type="image/icon type">
 
 </head>
 
 <body class="el-cuerpo-mi-rey">
-<?php 
-echo 'prueba php';
-include_once '/variables.php';
-?>    
+
     <!-- Cuerpo/contenedor principal de la pagina-->
     <div class="container-fluid m-auto">
 
