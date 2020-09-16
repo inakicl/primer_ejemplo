@@ -11,9 +11,7 @@
     <link rel="stylesheet" type="text/css" href="Librerias/bootstrap-4.5.2-dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="Css/estilos.css" />
     <meta charset="utf-8" />
-<?php 
-include 'variables.php';
-?>    
+
     <title>d</title>
     <link rel="icon" href="https://drive.google.com/thumbnail?id=1K6cGrtmbDGXZYLxO1fVy4gsHJohKczw-"
         type="image/icon type">
@@ -21,6 +19,9 @@ include 'variables.php';
 </head>
 
 <body class="el-cuerpo-mi-rey">
+<?php 
+echo 'prueba php';
+?>    
     <!-- Cuerpo/contenedor principal de la pagina-->
     <div class="container-fluid m-auto">
 
