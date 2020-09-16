@@ -1,27 +1,11 @@
 $(document).ready(function () {
 
-    // POR DEFECTO PONER QUE SE CARGUEN LOS PROYECTOS o info
-
-    // it works!!!!
-    /* let result = null;
-     $.ajax({
-         url: "https://api.github.com/users/inakicl/repos?type=owner",
-         async: false,
-     }).done(function (data) {
-         result = data;
-     });
- 
-     console.log(result[0]);
-     */
-    /* Fin pruebas  */
-
     // variables
-    let divInfos = null;
     let boton1 = $('#boton1');
     let boton2 = $('#boton2');
     let boton3 = $('#boton3');
 
-    let goTop = $('#goTop');
+    let botonGoTop = $('#goTop');
 
     let imagen1 = $('#imagen1');
     let imagen1Texto1 = $('#texto1');
@@ -29,12 +13,11 @@ $(document).ready(function () {
     let imagen2Texto2 = $('#texto2');
     let imagen3 = $('#imagen3');
     let imagen3Texto3 = $('#texto3');
+
     //variables ajax
     let repositorios = null;
     let estarred = null;
-
     //llamadas ajax
-    let result = null;
     $.ajax({
         url: "https://api.github.com/users/inakicl/repos?type=owner",
         async: false,
@@ -50,25 +33,26 @@ $(document).ready(function () {
 
 
     //listeners botones
-    $("#boton1").click(function () {
-        unClick(0);
-        clickInfoPersonal();
+    boton1.click(function () {
+        clicATab(0);
+        clickTab_1();
     });
-    $("#boton2").click(function () {
-        unClick(1);
-        clickProyectos();
+    boton2.click(function () {
+        clicATab(1);
+        clickTab_2();
     });
-    $("#boton3").click(function () {
-        unClick(2);
-        clickContacto();
+    boton3.click(function () {
+        clicATab(2);
+        clickTab_3();
     });
 
     $("#goTop").click(function () {
         goToTop();
     });
     //listener de cuando se scrollea y hay que subir rapido
-    window.onscroll = function () { scrollFunction() };
-
+    window.onscroll = function () {
+        scrollShowButton()
+    };
 
 
     /* desc de dentro de la imagen */
@@ -101,7 +85,7 @@ $(document).ready(function () {
     /**
      * Funcion de Forzar cargar la imagen que a veces no se ve la imagen sin esto
      */
-    function cargar() {
+    function forzarCargarImagen() {
         imagen1.removeAttr('hidden');
         imagen2.removeAttr('hidden');
         imagen3.removeAttr('hidden');
@@ -113,7 +97,7 @@ $(document).ready(function () {
      * El click que se le hace a la barra de tab de info personal proyectos y contacto
      * @param int tab 
      */
-    function unClick(tab) {
+    function clicATab(tab) {
         switch (tab) {
             case 0:
                 boton1.addClass('seleccionado');
@@ -133,122 +117,47 @@ $(document).ready(function () {
         }
     }
 
-    function clickInfoPersonal() {
-        divInfos.empty();
+    /**
+     * Funcion de cuando se le hace click al boton 1 de los tabs (ver info personal)
+     */
+    function clickTab_1() {
+        $('#tab-2').hide();
+        $('#tab-3').hide();
+        $('#tab-1').show();
+    }
 
-        divInfos.append('' +
-            '<div class="col-12 bg-especial"> ' +
-            '<div class="row m-4 ">' +
+    /**
+     * Funcion de cuando se le hace click al boton 2 de los tabs (ver repositorios/proyectos)
+     */
 
-            '<div class="col-12 col-lg-4 ">' +
-            '<div class="row text-center">' +
-            '<div class="col-12">' +
-            '<i class="fas fa-briefcase fa-2x text-danger "></i>' +
-            '</div>' +
-            '<div class="col-12">' +
-            'No trabajando' +
-            '</div>' +
-            '<div class="col-12">' +
-            'Lugar: <span> ninguno</span>' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
+    function clickTab_2() {
+        $('#tab-1').hide();
+        $('#tab-3').hide();
+        $('#tab-2').show();
 
-            '<div class="col-12 col-lg-4 mt-3 mt-lg-0">' +
-            '<div class="row text-center">' +
-            '<div class="col-12">' +
-            '<i class="fas fa-user fa-2x"></i>' +
-            '</div>' +
-            '<div class="col-12">' +
-            'Nombre: Iñaki Caballero' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
+        // poner los repositorios en Estrella de los que he trabajado con los compas
+        anyadir(estarred);
 
-            '<div class="col-12 col-lg-4 mt-3 mt-lg-0">' +
-            '<div class="row text-center">' +
-            '<div class="col-12">' +
-            '<i class="fas fa-city fa-2x text-secondary"></i>' +
-            '</div>' +
-            '<div class="col-12">' +
-            'Ciudad: Vitoria-Gasteiz' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
+        // añadir el resto de repositorios
+        anyadir(repositorios);
 
-
-            '<div class="col-12 mt-5 d-flex">' +
-            '<div class="row">' +
-            '<div class="col-12 d-flex justify-content-center mb-3">' +
-            '<i class="fas fa-info fa-2x text-info "></i>' +
-            '</div>' +
-            '<div class="col-12 ml-lg-3">' +
-            '<p id="info-parte-1">Estudiando desarrollo de aplicaciones desde finales de 2016 en' +
-            'Egibide-arriaga.' +
-            '</p>' +
-            '<p id="info-parte-2">Puedo abarcar muchos tipos de proyectos de aplicaciones y a ayudar a' +
-            'equipos de' +
-            'trabajo que' +
-            'necesiten personal' +
-            'de trabajo.' +
-            '</p>' +
-            '<p id="info-parte-3">También tengo cursado un grado de sistemas microinformáticos y redes.</p>' +
-
-            '</div>' +
-            '</div>' +
-            '</div>' +
-
-
-            '<div class="col-12 mt-5 d-flex bg-rojo rounded pl-0">' +
-            '<div class="bg-azul-oscuro p-4 rounded-left d-flex align-items-center">' +
-            '<i class="fas fa-laptop-code fa-3x "></i>' +
-            '</div>' +
-            '<div class="p-4 d-flex justify-content-around flex-wrap ml-lg-3 w-100">' +
-            '<i class="fab fa-java fa-2x m-2"></i>' +
-            '<i class="fab fa-swift fa-2x m-2"></i>' +
-            '<i class="fab fa-js-square fa-2x m-2"></i>' +
-            '<i class="fab fa-php fa-2x m-2"></i>' +
-            '<i class="fab fa-laravel fa-2x m-2"></i>' +
-            '<img src="https://uda-ejie.github.io/images/uda-big-250.png" class="imagen-uda ">' +
-            '<i class="fab fa-html5 fa-2x m-2"></i>' +
-            '<i class="fab fa-css3-alt fa-2x m-2"></i>' +
-            '</div>' +
-            '</div>' +
-
-            '</div>' +
-            '</div>');
 
     }
 
     /**
-     * Funcion de boton click ver proyectos/repositorios
+     * Funcion para evitar repetir codigo de añadir un div
+     * @param {*} element 
+     * @param {*} lenguajes 
      */
-    function clickProyectos() {
-        //vaciar el div contenedor
-        divInfos.empty();
-
-        // poner los repositorios en Estrella de los que he trabajado con los compas
-        estarred.forEach(element => {
+    function anyadir(array) {
+        array.forEach(element => {
             // a veces aparece en null el lenguaje porque no tiene nada en el repositorio, para evitar eso poner frase por defecto
-            let lenguajes = element.language;
-            if (lenguajes == "null") {
-                lenguajes = "Lenguaje no detectado";
-            }
-            divInfos.append('<div class="card bg-especial col-12 rounded-0" >' +
-                '<a class="card-body border rounded m-2" href="' + element.html_url + '">' +
-                '<h5 class="card-title">Repositorio: <span class="repositorio">' + element.full_name + '</span></h5>' +
-                '<h6 class="card-subtitle mb-2">Lenguaje principal: <span class="lenguaje">' + lenguajes + '</span></h6>' +
-                '</a>' +
-                '</div>' +
-                '</div>');
-        });
-        // añadir el resto de repositorios
-        repositorios.forEach(element => {
             let lenguajes = element.language;
             if (lenguajes == null) {
                 lenguajes = "Lenguaje no detectado";
             }
-            divInfos.append('<div class="card bg-especial col-12 rounded-0" >' +
+
+            $('#tab-2').append('<div class="card bg-especial col-12 rounded-0" >' +
                 '<a class="card-body border rounded m-2" href="' + element.html_url + '">' +
                 '<h5 class="card-title">Repositorio: <span class="repositorio">' + element.full_name + '</span> </h5>' +
                 '<h6 class="card-subtitle mb-2">Lenguaje principal: <span class="lenguaje">' + lenguajes + '</span></h6>' +
@@ -259,53 +168,40 @@ $(document).ready(function () {
 
     }
 
-    function clickContacto() {
-        divInfos.empty();
-
-        divInfos.append('' +
-            '<div class="col-12 bg-especial">' +
-            '<div class="row m-4 d-flex ">' +
-            '<div class="m-3">Curriculum vitae <i class="fas fa-arrow-right"></i></div>' +
-            '<div class="ml-2">' +
-            '<a href="https://drive.google.com/uc?id=1VB6D5cERRJ5ikZNJWUVFv60qkzIr_ozd" target="_blank">' +
-            '<i class="far fa-file-pdf fa-3x fab texto-rojo w-"></i>' +
-            '</a>' +
-            '</div>' +
-            '</div>' +
-            '<div class="row m-4 d-flex ">' +
-            '<div class="m-3">E-mail / correo electr&oacute;nico : i_caballero_lopez@hotmail.com </div>' +
-            '</div>' +
-            '<div class="row m-4 d-flex ">' +
-            '<div class="m-3">Tele&eacute;fono : 697 666 467 </div>' +
-            '</div>' +
-            '</div>');
+    /**
+     * Funcion de cuando se le hace click al boton 3 de los tabs
+     */
+    function clickTab_3() {
+        $('#tab-2').hide();
+        $('#tab-1').hide();
+        $('#tab-3').show();
     }
 
 
-
-    function scrollFunction() {
+    /**
+     * Funcion para que aparezca el boton de ir al principio de la página
+     */
+    function scrollShowButton() {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            goTop.show();
+            botonGoTop.show();
         } else {
-            goTop.hide();
+            botonGoTop.hide();
         }
     }
 
-    // ir al principio del documento
+    /**
+     * Funcion para ir al principio del documento
+     */
     function goToTop() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /** Empieza el codigo */
-
-    // si existe el div pa porsi. y poner por defecto seleccionado un TAB de info personal o proyectos
-    if ($('#infos').length > 0) {
-        divInfos = $('#infos');
-        boton1.click();
-    }
+    boton1.click();
 
     // Cuando carguen las imagenes hacer que aparezcan metiendoles una clase
-    setTimeout(cargar, 2000)
+    setTimeout(forzarCargarImagen, 2000)
 
 })
