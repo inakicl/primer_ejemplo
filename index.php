@@ -143,8 +143,11 @@
     <button id="goTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
 </body>
+
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <script src="Librerias/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
     <script src="JavaScript/funcionalidades.js" ></script>
     <script src="Librerias/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
 
