@@ -1,5 +1,35 @@
 $(document).ready(function () {
 
+    firebase.initializeApp({
+        apiKey: "AIzaSyBCQ6SVsHkPfSMBPPWtCK8oCtp5E3-nXu8",
+        authDomain: "portfolio-personal-13fcd.firebaseapp.com",
+        databaseURL: "https://portfolio-personal-13fcd.firebaseio.com",
+        projectId: "portfolio-personal-13fcd",
+        storageBucket: "portfolio-personal-13fcd.appspot.com",
+        messagingSenderId: "805782339737",
+        appId: "1:805782339737:web:6f179796697d113a417808",
+        measurementId: "G-QQ4BX97RDS"
+    });
+
+    var db = firebase.firestore();
+    var visitas_totales = db.collection("visitas").doc("jqPwB03vzpbWxe9DIeNC");
+
+    /**
+     * Llevar la cuenta de las visital totales
+     */
+    function sumarVisita() {
+        return visitas_totales.update({
+            visitas_totales: firebase.firestore.FieldValue.increment(1)
+        })
+            .then(function () {
+                console.log("Document successfully updated!");
+            })
+            .catch(function (error) {
+                // The document probably doesn't exist.
+                console.error("Error updating document: ", error);
+            });
+    }
+
     // variables
     let boton1 = $('#boton1');
     let boton2 = $('#boton2');
@@ -203,5 +233,7 @@ $(document).ready(function () {
 
     // Cuando carguen las imagenes hacer que aparezcan metiendoles una clase
     setTimeout(forzarCargarImagen, 2000)
+
+    sumarVisita(); // contabilizar visitas totales de la pagina web
 
 })
