@@ -3,7 +3,7 @@
         <div class="col-12 col-lg-4 ">
             <div class="row text-center">
                 <div class="col-12">
-                    <i class="fas fa-briefcase fa-2x text-danger "></i>
+                    <i class="fas fa-briefcase fa-2x text-success"></i>
                 </div>
                 <div class="col-12"><?= $working?></div>
                 <div class="col-12">
